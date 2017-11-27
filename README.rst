@@ -18,7 +18,7 @@ Install
 Usage
 -----
 
-``measure_areas filename ...``
+``./bin/measure_areas filename ...``
 
 Features
 --------

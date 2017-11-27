@@ -14,7 +14,6 @@ def measure_areas(filename):
         try:
             areas.append(p.area())
         except:
-            import pdb
-            pdb.set_trace()
+            print("Failed to handle {0} in {1}".format(p, filename))
 
     print("{0}: {1}".format(filename, abs(sum(areas))))

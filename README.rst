@@ -8,6 +8,8 @@ Measure areas of shapes in SVG
 Install
 -------
 
+::
+
     git clone https://github.com/jean/measure_areas.git
     cd measure_areas
     virtualenv .
@@ -16,7 +18,7 @@ Install
 Usage
 -----
 
-`measure_areas filename ...`
+``measure_areas filename ...``
 
 Features
 --------

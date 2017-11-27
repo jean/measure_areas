@@ -3,14 +3,18 @@
 """Console script for measure_areas."""
 
 import click
+from measure_areas import measure_areas
 
 
 @click.command()
-def main(args=None):
+@click.argument('filenames', type=click.Path(exists=True), nargs=-1)
+def main(filenames):
     """Console script for measure_areas."""
-    click.echo("Replace this message by putting your code into "
-               "measure_areas.cli.main")
-    click.echo("See click documentation at http://click.pocoo.org/")
+    if not filenames:
+        print("No files specified")
+        return
+    for fn in filenames:
+        measure_areas(fn)
 
 
 if __name__ == "__main__":

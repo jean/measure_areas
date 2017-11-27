@@ -14,8 +14,9 @@ with open('HISTORY.rst') as history_file:
 requirements = [
     'Click>=6.0',
     'numpy',
-    'svgwrite,'
-    'svgpathtools'
+    'svgwrite',
+    'svgpathtools',
+    'bottle'
 ]
 
 setup_requirements = [
@@ -39,7 +40,8 @@ setup(
     packages=find_packages(include=['measure_areas']),
     entry_points={
         'console_scripts': [
-            'measure_areas=measure_areas.cli:main'
+            'measure_areas=measure_areas.cli:main',
+            'measure_areas_serve=measure_areas.serve:main'
         ]
     },
     include_package_data=True,

@@ -10,7 +10,6 @@ from measure_areas import measure_areas
 def main():
     """Server for measure_areas."""
     run()
-    return "OK"
 
 @route('/', method='POST')
 def measure():

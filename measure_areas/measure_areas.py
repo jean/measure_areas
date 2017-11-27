@@ -14,6 +14,9 @@ def measure_areas(filename):
         try:
             areas.append(p.area())
         except Exception as e:
-            print("Failed to handle {0} in {1}: {2}".format(p, filename, e))
+            print("""
+{0} in {1}:
+{2}
+""".format(repr(e), filename, p))
 
     print("{0}: {1}".format(filename, abs(sum(areas))))

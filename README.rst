@@ -13,6 +13,7 @@ Install
     git clone https://github.com/jean/measure_areas.git
     cd measure_areas
     virtualenv .
+    . bin/activate
     pip install -e .
 
 Usage

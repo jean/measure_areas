@@ -19,7 +19,15 @@ Install
 Usage
 -----
 
-``./bin/measure_areas filename ...``
+Commandline usage::
+
+        ./bin/measure_areas filename ...
+
+You can start up a server too::
+
+        ./bin/measure_areas_serve ...
+
+This accepts POSTs on port 8080, expecting a file under the key `upload`.
 
 Features
 --------

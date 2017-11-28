@@ -18,39 +18,38 @@
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
 
+    <link href="css/style.css" rel="stylesheet">
     
 </head>
 
-<body>
+<body class="hm-black-strong">
 
     <!--Navbar-->
     <!--/.Navbar-->
-    <header>
         <!--Intro Section-->
-        <section class="view intro-1 hm-black-strong">
+        <section class="intro-1">
             <div class="full-bg-img flex-top">
                 <div class="container">
-                    <section id="best-features">
+                    <section>
 
                         <div class="row pt-3">
 
                             <!--First columnn-->
-                            <div class="col-lg-9 mb-r">
+                            <div class="col-md-9 mb-r">
 
                                 <!--Card-->
                                 <div class="card wow fadeIn">
 
                                     <!--Card image-->
-                                    {{!svg}}
 
                                     <!--Card content-->
                                     <div class="card-body">
                                         <!--Title-->
-                                        <h4 class="card-title text-center"></h4>
+                                        <h4 class="card-title text-center">Design</h4>
                                         <hr>
+                                        {{!svg}}
                                         <!--Text-->
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                            content.</p>
+                                        <p class="card-text"></p>
                                     </div>
 
                                 </div>
@@ -59,7 +58,7 @@
                             <!--First columnn-->
 
                             <!--First columnn-->
-                            <div class="col-lg-3 mb-r">
+                            <div class="col-md-3 mb-r">
                                 <!--Card-->
                                 <div class="card wow fadeIn" data-wow-delay="0.6s">
 
@@ -69,10 +68,12 @@
                                     <!--Card content-->
                                     <div class="card-body">
                                         <!--Title-->
-                                        <h4 class="card-title text-center">Design Information</h4>
+                                        <h4 class="card-title text-center">Design Measurements</h4>
                                         <hr>
                                         <!--Text-->
-                                        <p class="card-text"><b>Area: </b><span id="area">{{area}}</span></p>
+                                        <p class="card-text"><b>Canvas Width: </b><span id="canvas-width"></span></p>
+                                        <p class="card-text"><b>Canvas Height: </b><span id="canvas-height"></span></p>
+                                        <p class="card-text"><b>Object(s) Area: </b><span id="area">{{area}}</span></p>
                                     </div>
 
                                 </div>
@@ -89,7 +90,6 @@
             </div>
         </section>
 
-    </header>
     <!-- Main container-->
 
     <!--Footer-->
@@ -115,6 +115,8 @@
     <!-- Animations init-->
     <script>
         new WOW().init();
+        $('#canvas-width').text($('svg').attr('width'));
+        $('#canvas-height').text($('svg').attr('height'));
         var units = $('svg').attr('width');
         if (typeof units==='string') {
             units = units.replace(/[0-9]/g, '');

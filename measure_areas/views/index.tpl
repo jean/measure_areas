@@ -55,7 +55,7 @@
                 <div class="container">
                     <ul>
                         <li>
-                            <h1 class="h1-responsive font-bold wow fadeInDown" data-wow-delay="0.2s">Quotation Estimate 0.27 alpha</h1>
+                            <h1 class="h1-responsive font-bold wow fadeInDown" data-wow-delay="0.2s">Quotation Estimate Tester 0.27 alpha</h1>
                         </li>
                         <li>
                             <p class="lead mt-4 mb-5 wow fadeInDown">Upload your design for measurement.</p>

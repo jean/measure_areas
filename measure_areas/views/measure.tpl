@@ -77,6 +77,8 @@
 
                                 </div>
                                 <!--/.Card-->
+                                <a href="/" class="btn btn-default btn-lg wow fadeInRight"
+                                data-wow-delay="0.2s" rel="nofollow" >Upload Again</a>
                             </div>
                             <!--First columnn-->
                         </div>

@@ -4,7 +4,7 @@
 
 from bottle import route, run, request, template, get, static_file
 from tempfile import NamedTemporaryFile
-from measure_areas import measure_areas
+from measure_areas.measure_areas import measure_areas
 
 
 def main():
@@ -18,7 +18,7 @@ def measure():
     if not upload:
         return "No files specified"
     tmpfile = NamedTemporaryFile()
-    upload.save(tmpfile.name)
+    upload.save(tmpfile.name, overwrite=True)
     return measure_areas(tmpfile.name)
 
 @get("/css/<filepath:re:.*\.(css|map)>")

@@ -3,7 +3,7 @@
 """Console script for measure_areas."""
 
 import click
-from measure_areas import measure_areas
+from measure_areas.measure_areas import measure_areas
 
 
 @click.command()

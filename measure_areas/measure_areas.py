@@ -20,3 +20,4 @@ def measure_areas(filename):
 """.format(repr(e), filename, p))
 
     print("{0}: {1}".format(filename, abs(sum(areas))))
+    return "{0:,.2f}".format(abs(sum(areas)))

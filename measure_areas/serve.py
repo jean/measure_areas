@@ -4,7 +4,7 @@
 
 from bottle import route, run, request, template, get, static_file
 from tempfile import NamedTemporaryFile
-from measure_areas.measure_areas import measure_areas
+from measure_areas import measure_areas
 
 
 def main():
@@ -19,7 +19,9 @@ def measure():
         return "No files specified"
     tmpfile = NamedTemporaryFile()
     upload.save(tmpfile.name, overwrite=True)
-    return measure_areas(tmpfile.name)
+    with open(tmpfile.name, 'r') as svgfile:
+        svg=svgfile.read()
+    return template('measure.tpl', area=measure_areas(tmpfile.name), svg=svg)
 
 @get("/css/<filepath:re:.*\.(css|map)>")
 def css(filepath):
